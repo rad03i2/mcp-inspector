@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "local-tools": {
+      "command": "python",
+      "args": ["-m", "my_mcp_server"],
+      "env": {
+        "APP_MODE": "development",
+        "API_TOKEN": "${API_TOKEN}"
+      }
+    },
+    "remote-example": {
+      "url": "https://mcp.example.invalid/mcp"
+    }
+  }
+}
