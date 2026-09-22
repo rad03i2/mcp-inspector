@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-inspector-local"
+version = "1.0.0"
+description = "A local CLI for inspecting and validating MCP server configuration files safely."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+keywords = ["mcp", "model-context-protocol", "developer-tools", "validation"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+
+[project.scripts]
+mcp-inspector-local = "mcp_inspector.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_inspector"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
